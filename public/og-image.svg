@@ -1,0 +1,64 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo con gradiente -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7c3aed;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#93c5fd;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo principal -->
+  <rect width="1200" height="630" fill="url(#bgGradient)"/>
+  
+  <!-- Patrón de puntos decorativos -->
+  <g opacity="0.3">
+    <circle cx="100" cy="100" r="2" fill="white"/>
+    <circle cx="300" cy="150" r="1.5" fill="white"/>
+    <circle cx="500" cy="80" r="1" fill="white"/>
+    <circle cx="700" cy="200" r="2" fill="white"/>
+    <circle cx="900" cy="120" r="1.5" fill="white"/>
+    <circle cx="1100" cy="180" r="1" fill="white"/>
+    <circle cx="150" cy="400" r="1.5" fill="white"/>
+    <circle cx="350" cy="500" r="2" fill="white"/>
+    <circle cx="550" cy="450" r="1" fill="white"/>
+    <circle cx="750" cy="550" r="1.5" fill="white"/>
+    <circle cx="950" cy="480" r="2" fill="white"/>
+    <circle cx="1150" cy="520" r="1" fill="white"/>
+  </g>
+  
+  <!-- Círculo central con gradiente -->
+  <circle cx="600" cy="250" r="120" fill="url(#bgGradient)" stroke="white" stroke-width="3" opacity="0.9"/>
+  
+  <!-- Icono de IA en el centro -->
+  <text x="600" y="270" font-family="Arial, sans-serif" font-size="80" font-weight="bold" text-anchor="middle" fill="white">🤖</text>
+  
+  <!-- Título principal -->
+  <text x="600" y="420" font-family="Arial, sans-serif" font-size="48" font-weight="bold" text-anchor="middle" fill="url(#textGradient)">
+    IAnexo
+  </text>
+  
+  <!-- Subtítulo -->
+  <text x="600" y="470" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="white" opacity="0.9">
+    Asistente de IA para Servicios Financieros
+  </text>
+  
+  <!-- Descripción -->
+  <text x="600" y="510" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="white" opacity="0.7">
+    Conecta instantáneamente con nuestro agente especializado
+  </text>
+  
+  <!-- Elementos decorativos adicionales -->
+  <g opacity="0.2">
+    <rect x="50" y="50" width="100" height="2" fill="white" rx="1"/>
+    <rect x="1050" y="50" width="100" height="2" fill="white" rx="1"/>
+    <rect x="50" y="578" width="100" height="2" fill="white" rx="1"/>
+    <rect x="1050" y="578" width="100" height="2" fill="white" rx="1"/>
+  </g>
+</svg>
