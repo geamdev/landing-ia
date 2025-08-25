@@ -1,13 +1,5 @@
-import React from 'react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import {
-  CircleUserRound,
-  FolderKanban,
-  PanelsTopLeft,
-  Brain,
-  CreditCard,
-  Building2,
-} from 'lucide-react';
+import { Brain, CreditCard, Building2 } from 'lucide-react';
 
 export default function TabsDemo() {
   return (
