@@ -12,7 +12,7 @@ export const DEFAULT_JAMBONZ_CONFIG = {
   accountSid: 'f9d6edef-abc3-4197-9b7e-d63364462af9',
   apiKey: '816567c2-039b-4e81-942b-9f0e53719f76',
   //staging
-  defaultAppId: '6e86266a-af9c-4ffd-9b01-cad79ee1cac5',
+  defaultAppId: '1c838669-e118-405d-aa91-6e38822ca768',
   defaultAppName: 'Agente Bancario no borrar staging',
 };
 
