@@ -6,9 +6,9 @@ export const DEFAULT_JAMBONZ_CONFIG = {
   sipDomain: 'intelnexo-dialer.sip.jambonz.cloud',
   sipServerAddress: 'wss://sip.jambonz.cloud:8443/',
   apiServer: 'https://jambonz.cloud/api/v1',
-  sipUsername: 'geampiere',
-  sipPassword: 'Intelnexo*2024',
-  sipDisplayName: 'Geampiere',
+  sipUsername: 'kiosko',
+  sipPassword: 'pass1234',
+  sipDisplayName: 'Kiosko',
   accountSid: 'f9d6edef-abc3-4197-9b7e-d63364462af9',
   apiKey: '816567c2-039b-4e81-942b-9f0e53719f76',
   //staging
