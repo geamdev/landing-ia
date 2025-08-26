@@ -3,36 +3,17 @@ import { DEFAULT_JAMBONZ_CONFIG } from '@/common/constants';
 import { useSip } from '@/hooks/useSip';
 import { SipClientStatus } from '@/common/types';
 import { AILoader } from '../ui/ai-loader';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export const AiDialer = () => {
   const { callStatus, makeCall, hangup, isConnected, isRegistered } = useSip();
   const [isProcessing, setIsProcessing] = useState(false);
 
-  // Manejar el estado de procesamiento basado en el estado real de la llamada
-  useEffect(() => {
-    // Si la llamada está en progreso (ringing, answered, in call), mantener procesando
-    if (
-      callStatus === SipClientStatus.Ringing ||
-      callStatus === SipClientStatus.CallAnswered ||
-      callStatus === SipClientStatus.InCall
-    ) {
-      setIsProcessing(true);
-    }
-    // Si la llamada terminó o falló, permitir nueva llamada
-    else if (
-      callStatus === SipClientStatus.CallEnded ||
-      callStatus === SipClientStatus.CallFailed ||
-      callStatus === SipClientStatus.Connected ||
-      callStatus === SipClientStatus.Registered
-    ) {
-      setIsProcessing(false);
-    }
-  }, [callStatus]);
-
   const handleTestAgent = () => {
     // Prevenir múltiples clics
     if (isProcessing) return;
+
+    setIsProcessing(true);
 
     const defaultAppId = DEFAULT_JAMBONZ_CONFIG.defaultAppId;
     const defaultAppName = DEFAULT_JAMBONZ_CONFIG.defaultAppName;
@@ -46,16 +27,23 @@ export const AiDialer = () => {
     const appNumber = `app-${defaultAppId}`;
     makeCall(appNumber, [`X-Application-Sid: ${defaultAppId}`]);
 
-    // El useEffect se encargará de manejar isProcessing basado en callStatus
+    // Resetear el estado después de un breve delay
+    setTimeout(() => {
+      setIsProcessing(false);
+    }, 2000);
   };
 
   const handleHangup = () => {
     // Prevenir múltiples clics
     if (isProcessing) return;
 
+    setIsProcessing(true);
     hangup();
 
-    // El useEffect se encargará de manejar isProcessing basado en callStatus
+    // Resetear el estado después de un breve delay
+    setTimeout(() => {
+      setIsProcessing(false);
+    }, 1000);
   };
 
   // Determinar el estado del botón
