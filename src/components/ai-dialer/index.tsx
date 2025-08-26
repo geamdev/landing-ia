@@ -3,11 +3,18 @@ import { DEFAULT_JAMBONZ_CONFIG } from '@/common/constants';
 import { useSip } from '@/hooks/useSip';
 import { SipClientStatus } from '@/common/types';
 import { AILoader } from '../ui/ai-loader';
+import { useState } from 'react';
 
 export const AiDialer = () => {
   const { callStatus, makeCall, hangup, isConnected, isRegistered } = useSip();
+  const [isProcessing, setIsProcessing] = useState(false);
 
   const handleTestAgent = () => {
+    // Prevenir múltiples clics
+    if (isProcessing) return;
+
+    setIsProcessing(true);
+
     const defaultAppId = DEFAULT_JAMBONZ_CONFIG.defaultAppId;
     const defaultAppName = DEFAULT_JAMBONZ_CONFIG.defaultAppName;
 
@@ -19,10 +26,24 @@ export const AiDialer = () => {
     // Llamar directamente al agente IA usando el app ID
     const appNumber = `app-${defaultAppId}`;
     makeCall(appNumber, [`X-Application-Sid: ${defaultAppId}`]);
+
+    // Resetear el estado después de un breve delay
+    setTimeout(() => {
+      setIsProcessing(false);
+    }, 2000);
   };
 
   const handleHangup = () => {
+    // Prevenir múltiples clics
+    if (isProcessing) return;
+
+    setIsProcessing(true);
     hangup();
+
+    // Resetear el estado después de un breve delay
+    setTimeout(() => {
+      setIsProcessing(false);
+    }, 1000);
   };
 
   // Determinar el estado del botón
@@ -33,6 +54,11 @@ export const AiDialer = () => {
 
     if (!isRegistered) {
       return { text: 'Registrando...', disabled: true, loading: true };
+    }
+
+    // Si está procesando, deshabilitar el botón
+    if (isProcessing) {
+      return { text: 'Procesando...', disabled: true, loading: true };
     }
 
     switch (callStatus) {
