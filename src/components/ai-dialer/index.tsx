@@ -58,7 +58,7 @@ export const AiDialer = () => {
 
     // Si está procesando, deshabilitar el botón
     if (isProcessing) {
-      return { text: 'Procesando...', disabled: true, loading: true };
+      return { text: 'Sincronizando...', disabled: true, loading: true };
     }
 
     switch (callStatus) {
@@ -93,36 +93,36 @@ export const AiDialer = () => {
     } else if (callStatus === SipClientStatus.Ringing) {
       return { text: 'Conectando...', isActive: true };
     } else {
-      return { text: 'Generando', isActive: false };
+      return { text: 'En espera...', isActive: false };
     }
   };
 
   const loaderState = getLoaderState();
 
   return (
-    <div className='flex flex-col items-center space-y-8 w-full max-w-3xl mx-auto p-6'>
-      {/* Título principal */}
-      <div className='text-center space-y-3'>
-        <h1 className='text-5xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent'>
-          Asistente de IA
-        </h1>
-      </div>
-
+    <div className='flex flex-col items-center space-y-8 w-full max-w-3xl mx-auto'>
       {/* Loader de IA con ondas de audio */}
       <div className='py-4'>
         <AILoader
-          size={180}
+          size={220}
           text={loaderState.text}
           isActive={loaderState.isActive}
         />
       </div>
+      <div className='flex flex-col items-center space-y-3'>
+        {/* Título principal */}
+        <div className='text-center space-y-3'>
+          <h1 className='md:text-5xl text-2xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent'>
+            Habla con un BANCO hecho IA
+          </h1>
+        </div>
 
-      {/* Descripción */}
-      <div className='text-center max-w-2xl'>
-        <p className='text-lg text-white/80 leading-relaxed font-medium'>
-          Conecta instantáneamente con nuestro agente de IA especializado en
-          servicios financieros y bancarios
-        </p>
+        {/* Descripción */}
+        <div className='text-center max-w-2xl'>
+          <p className='md:text-lg text-sm text-gray-300 leading-relaxed font-medium'>
+            Haz una consulta real y recibe respuesta al instante.
+          </p>
+        </div>
       </div>
 
       {/* Botón principal */}

@@ -10,29 +10,29 @@ function App() {
       value: 'financiero',
       content: <AiDialer />,
     },
-    {
-      title: 'Agente Bancario',
-      value: 'bancario',
-      content: (
-        <div className='flex flex-col items-center justify-center min-h-[60vh] w-full'>
-          <div className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 max-w-xl w-full text-center'>
-            <div className='w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-blue-500/25'>
-              <span className='text-2xl'>🏦</span>
-            </div>
-            <h2 className='text-3xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-4'>
-              Agente Bancario
-            </h2>
-            <p className='text-lg text-white/70 leading-relaxed mb-6'>
-              Próximamente estará disponible nuestro agente bancario
-              especializado
-            </p>
-            <div className='inline-flex items-center justify-center px-4 py-2 rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-400/30 text-sm font-medium'>
-              🚧 En desarrollo
-            </div>
-          </div>
-        </div>
-      ),
-    },
+    // {
+    //   title: 'Agente Bancario',
+    //   value: 'bancario',
+    //   content: (
+    //     <div className='flex flex-col items-center justify-center min-h-[60vh] w-full'>
+    //       <div className='bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-8 max-w-xl w-full text-center'>
+    //         <div className='w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6 shadow-2xl shadow-blue-500/25'>
+    //           <span className='text-2xl'>🏦</span>
+    //         </div>
+    //         <h2 className='text-3xl font-bold bg-gradient-to-r from-white via-blue-100 to-purple-100 bg-clip-text text-transparent mb-4'>
+    //           Agente Bancario
+    //         </h2>
+    //         <p className='text-lg text-white/70 leading-relaxed mb-6'>
+    //           Próximamente estará disponible nuestro agente bancario
+    //           especializado
+    //         </p>
+    //         <div className='inline-flex items-center justify-center px-4 py-2 rounded-full bg-yellow-500/20 text-yellow-300 border border-yellow-400/30 text-sm font-medium'>
+    //           🚧 En desarrollo
+    //         </div>
+    //       </div>
+    //     </div>
+    //   ),
+    // },
   ];
 
   return (
