@@ -37,7 +37,7 @@ export function TestCallModal({ open, onOpenChange }: TestCallModalProps) {
   const setIsOpen = onOpenChange || setShowDialog;
 
   // fixed campaign id for test calls
-  const CAMPAIGN_ID = 99;
+  const CAMPAIGN_ID = 102;
 
   type TestCallFormValues = z.infer<typeof testCallFormSchema> & {
     campana_id?: number;
