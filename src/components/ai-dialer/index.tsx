@@ -126,11 +126,12 @@ export const AiDialer = () => {
       </div>
 
       {/* Botón principal */}
-      <div className='pt-2'>
+      <div className='pt-2 flex flex-col items-center'>
         <Button
           onClick={buttonState.isHangup ? handleHangup : handleTestAgent}
           disabled={buttonState.disabled}
           size='lg'
+          className='text-xl'
           variant={buttonState.isHangup ? 'destructive' : 'default'}
         >
           {buttonState.loading && (
@@ -141,7 +142,7 @@ export const AiDialer = () => {
 
         {/* Información de contacto */}
         <div className='text-center'>
-          <p className='text-sm text-white font-medium mt-1'>
+          <p className='text-lg text-white font-medium mt-1'>
             o llama a{' '}
             <span className='text-blue-500/80 font-semibold'>593 44005142</span>
           </p>
