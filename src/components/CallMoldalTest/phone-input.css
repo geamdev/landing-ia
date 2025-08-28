@@ -1,0 +1,58 @@
+/* Estilos para react-phone-number-input */
+.PhoneInput {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: rgb(55 65 81 / 0.5);
+  border: 1px solid rgb(75 85 99 / 0.5);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.PhoneInput:focus-within {
+  border-color: rgba(59, 130, 246, 0.6);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.PhoneInputCountry {
+  position: relative;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  margin-right: 0.75rem;
+  color: white;
+}
+
+.PhoneInputCountrySelect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  border: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.PhoneInputCountryIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 2px;
+}
+
+.PhoneInputInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: inherit;
+  line-height: inherit;
+  color: white;
+}
+
+.PhoneInputInput::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}

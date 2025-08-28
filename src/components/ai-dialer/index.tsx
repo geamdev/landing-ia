@@ -140,8 +140,8 @@ export const AiDialer = () => {
         </Button>
 
         {/* Información de contacto */}
-        <div className='text-center mt-4'>
-          <p className='text-sm text-white font-medium'>
+        <div className='text-center'>
+          <p className='text-sm text-white font-medium mt-1'>
             o llama a{' '}
             <span className='text-blue-500/80 font-semibold'>593 44005142</span>
           </p>

@@ -2,6 +2,8 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import AnimatedBackground from '@/components/animated-background';
 import Header from '@/components/header';
 import AiDialer from '@/components/ai-dialer';
+import { FloatingCallButton } from '@/components/FloatingCallButton';
+import { Toaster } from 'sonner';
 
 function App() {
   const tabsSettings = [
@@ -76,6 +78,12 @@ function App() {
           </Tabs>
         </div>
       </div>
+
+      {/* Botón flotante de llamada */}
+      <FloatingCallButton />
+
+      {/* Toaster para notificaciones */}
+      <Toaster position='top-right' richColors closeButton duration={4000} />
     </>
   );
 }
