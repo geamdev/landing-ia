@@ -112,14 +112,14 @@ export const AiDialer = () => {
       <div className='flex flex-col items-center space-y-3'>
         {/* Título principal */}
         <div className='text-center space-y-3'>
-          <h1 className='md:text-5xl text-2xl font-bold bg-gradient-to-r from-white via-gray-200 to-gray-300 bg-clip-text text-transparent'>
+          <h1 className='md:text-5xl text-2xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent'>
             Habla con un BANCO hecho IA
           </h1>
         </div>
 
         {/* Descripción */}
         <div className='text-center max-w-2xl'>
-          <p className='md:text-lg text-sm text-gray-300 leading-relaxed font-medium'>
+          <p className='md:text-lg text-sm text-blue-100 leading-relaxed font-medium'>
             Haz una consulta real y recibe respuesta al instante.
           </p>
         </div>
@@ -138,6 +138,14 @@ export const AiDialer = () => {
           )}
           {buttonState.text}
         </Button>
+
+        {/* Información de contacto */}
+        <div className='text-center mt-4'>
+          <p className='text-sm text-white font-medium'>
+            o llama a{' '}
+            <span className='text-blue-500/80 font-semibold'>593 44005142</span>
+          </p>
+        </div>
       </div>
     </div>
   );

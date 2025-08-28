@@ -20,7 +20,7 @@ export const AnimatedBackground = () => {
         left={0}
         width='100%'
         height='100%'
-        background='linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 30%, #4a4a4a 60%, #6b6b6b 100%)'
+        background='linear-gradient(135deg, #0b1328 0%, #1a1b3a 20%, #2d2d64 50%, #5f4b8b 75%, #b8a9fe 100%)'
       />
 
       {/* Ondas animadas */}
